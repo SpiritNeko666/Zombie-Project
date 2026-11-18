@@ -1,14 +1,15 @@
 #include "Survivor.h"
 #include <iostream>
 //#include <random>
-
+#include <cstdlib>
+#include <ctime>
 using namespace std;
 
 
 
 Survivor::Survivor(){
 
-        this->stats = rand() % 100 + 1;;
+        this->stats = rand() % 100 + 1;
         this->maxHealth = 10;
         this->name = name;
         this->id = id;
@@ -26,6 +27,7 @@ int Survivor::getStats(){
 }
 
 string Survivor::getName(){
+    cout << name;
     return name;
 }
     

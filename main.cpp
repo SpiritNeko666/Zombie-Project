@@ -1,4 +1,6 @@
-#include "Survivor.h"
+//#include "Survivor.h"
+#include "Camp.h"
+
 #include <cstdlib>
 #include <ctime>
 
@@ -9,10 +11,12 @@ using namespace std;
 
 
 int main(){
-   
+    srand(static_cast<unsigned int>(time(0)));
+
     Survivor testSurvivor;
     Survivor testSurvivor2;
-
+    Camp survivorCamp;
+    
     testSurvivor.setName();
     testSurvivor.getStats();
 
@@ -21,6 +25,8 @@ int main(){
 
     testSurvivor.testing();
     testSurvivor2.testing();
-
+    
+    survivorCamp.addSurvivor(testSurvivor2);
+    survivorCamp.printSurvivors();
     return 0;
 }
