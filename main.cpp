@@ -18,15 +18,19 @@ int main(){
     Camp survivorCamp;
     
     testSurvivor.setName();
-    testSurvivor.getStats();
+   // testSurvivor.getStats();
+   // testSurvivor.getName();
 
     testSurvivor2.setName();
-    testSurvivor2.getStats();
-
-    testSurvivor.testing();
-    testSurvivor2.testing();
+   // testSurvivor2.getStats();
+   // testSurvivor2.getName();
+    testSurvivor.removeHealth();
+    testSurvivor.healHealth();
+    testSurvivor.isAlive();
     
-    survivorCamp.addSurvivor(testSurvivor2);
-    survivorCamp.printSurvivors();
+   survivorCamp.addSurvivor(testSurvivor);
+   survivorCamp.addSurvivor(testSurvivor2);
+
+   survivorCamp.printSurvivors();
     return 0;
 }

@@ -20,6 +20,7 @@ class Camp{
         void removeSurvivor(string id);
         bool hasSurvivor(string id);
         void printSurvivors();
+        
         Camp();
         ~Camp();
 

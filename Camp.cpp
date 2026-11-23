@@ -23,10 +23,15 @@ bool Camp::addSurvivor(Survivor survivor){
         return false;
         
     }
-    //this->survivors(this->numberOfSurvivors) = survivor;
+    
+
+
     this->numberOfSurvivors += 1;
-    cout << "added survivor";
-    cout << "\n" << numberOfSurvivors;
+    cout << "added survivor\n";
+   // cout << "\n" << numberOfSurvivors;
+    survivors[numberOfSurvivors - 1] = survivor;
+
+
     return true;
 }
 
@@ -42,9 +47,10 @@ bool Camp::hasSurvivor(string id){
 
 void Camp::printSurvivors(){
     cout << "Survivors in camp: \n";
-    cout << survivors[0].getName();
-    for (int i = 0; i < arraySize; i++){
-        cout << survivors[i].getName();
-        cout << "loop";
+    for (int i = 0; i < numberOfSurvivors; i++){
+        cout << survivors[i].getName() << "\n";
+        cout << survivors[i].getStats() << "\n";
+
+        cout << "\n";
     }
 }

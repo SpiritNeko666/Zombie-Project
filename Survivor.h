@@ -11,6 +11,7 @@ class Survivor{
         int maxHealth;
         string name;
         string id;
+        int currentHealth;
 
     public:
         Survivor();
@@ -34,8 +35,9 @@ class Survivor{
         void setName();
         void setStats();
         
-        void setHealth();
-        void setCurrentHealth();
+        void healHealth();
+        void removeHealth();
+
 
 };
 #endif
