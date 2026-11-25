@@ -10,15 +10,16 @@ using namespace std;
 class Camp{
 
     private:
-        Survivor*survivors;
+        Survivor**survivors;
         int arraySize;
         int numberOfSurvivors;
    //     int survivors;
 
     public:
-        bool addSurvivor(Survivor survivor);
+        bool addSurvivor(Survivor * survivor);
         void removeSurvivor(string id);
         bool hasSurvivor(string id);
+        void getSurvivor(string id);
         void printSurvivors();
         
         Camp();

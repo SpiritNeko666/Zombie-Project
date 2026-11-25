@@ -1,5 +1,6 @@
 #include "Survivor.h"
 #include <iostream>
+
 //#include <random>
 #include <cstdlib>
 #include <ctime>
@@ -33,7 +34,6 @@ int Survivor::getStats(){
 }
 
 string Survivor::getName(){
-    cout << "Survivor name: ";
     return name;
 }
     
@@ -45,6 +45,7 @@ cout << "\nSurvivor max Health: " << maxHealth;
 void Survivor::setName(){
     cout << "input your survivors new name: ";
     cin >> name;
+
 
 }
 
@@ -60,10 +61,9 @@ void Survivor::healHealth(){
 }
 void Survivor::removeHealth(){
     if(currentHealth > 0){
-    currentHealth = currentHealth - 1; 
+    currentHealth = currentHealth - 100; 
     cout << currentHealth << "\n";
     } else { 
-        cout << "HE DEAD!!!";
 
     }
 
@@ -73,7 +73,8 @@ bool Survivor::isAlive(){
     if (currentHealth > 0){
         return true;
     }else{
-        cout << "Dude is dead";
+        cout << name << " is dead\n";
+        
 
         return false;
     }
