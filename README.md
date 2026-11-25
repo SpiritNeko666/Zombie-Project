@@ -1,3 +1,5 @@
+```mermaid
+
 classDiagram
     class Survivor{
         -name : string
@@ -53,3 +55,5 @@ classDiagram
   Camp*--Survivor
   Survivor*-- Weapon
   Camp*-- Supplies
+
+```
